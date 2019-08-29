@@ -1,17 +1,28 @@
 @import varibel
 @import smart-grid
 
-
+div
+  box-sizing: border-box
 canvas
    position: absolute
    width: 5%
    height: 14%  
    top: 16px 
    right: 20px
+
+html 
+  @media screen and  (min-width: 1200px) 
+           font-size:  $Font_Ex_Larg
+  @media screen and  (max-width: 1199px) and (min-width:992px)
+           font-size:  $Font_Larg
+  @media screen and  (max-width: 991px) and (min-width: 768px)
+           font-size:  $Font_Medium
+  @media screen and  (max-width: 767px) and (min-width: 450px)
+           font-size:  $Font_Small
+
    
 body 
   +bodystyle
-  font-size: $FONT_size
   +flex
   flex-direction: column
   align-items: center
@@ -20,6 +31,9 @@ body
   position: relative
   z-index: 1
 
+
+.border 
+ +borderr
 
 
 
@@ -31,29 +45,37 @@ header
  max-width: 1280px
  align-items: center
  justify-content: space-around
-
+ padding-bottom: 2.7%
+ padding: 0% 1.7%
+ padding-bottom: .1%
  .top
    +flex
-   justify-content: space-around
+   justify-content: flex-start
    min-width: 100%
-   margin-top: 4%
-   margin-bottom: 8%
+   margin-top: 3.8%
+   margin-bottom: 7.4%
    flex-wrap: wrap
+   margin-left: -1%
    .logo 
     +flex
-    margin-left: 12%    
+    margin-left: 12%
+    margin-right: 3.3% 
+    a 
+      margin-top: -11%
+      margin-bottom: 13%   
    .menu
     +flex
-    margin-right: 33%
-   ul 
-    +flex
-    justify-content: space-between
-    min-width: 50%
-    list-style: none
+    justify-content: center
+    margin-top: .5%
+    ul 
+     +flex
+     justify-content: space-between
+     min-width: 401px
+     list-style: none
+     margin-left: 9%
     li 
-      min-width: 4rem
       +flex
-      justify-content: center
+      justify-content: space-between
       a
        text-decoration: none
        color: #d8d8d7
@@ -65,24 +87,47 @@ header
    margin-bottom: 10%
    min-width: 100%
    flex-wrap: wrap
+   margin-top: 1%
    .left
     position: relative
     z-index: 1
-    left: 10%
-    margin-left: 3%
+    left: 9.7%
+    img 
+     margin-left: 12.7%
+     margin-top: 8%
+     @media screen and  (max-width: 760px)
+           margin-left: 33.7%
+           margin-top: -3%
+     @media screen and (min-width: 761px) and (max-width: 1200px)
+           margin-left: 32.7%
+           margin-top: 2%
    .center
     font-family: $font
-    font-size: 2rem
+    font-size: 2.3rem
     max-width: 60%
     color: #fff
     p 
-     margin-top: 4%
+     margin-top: 6%
+     margin-left: 3.5%
+     line-height: 44px
+     margin-bottom: 9%
+     max-width: 88%
+     
    .right
      i 
       position: absolute
-      top:  17.5%
+      top:  17.1%
       right: 18%
       color: #fff
+      @media screen and  (max-width: 1199px) and (min-width: 851px)
+           top: 17.1% 
+           right: 7%
+      @media screen and  (max-width: 850px) and (min-width: 760px)
+           top: 15.1% 
+           right: 7%
+      @media screen and  (max-width: 760px) 
+           top: 12% 
+           right: 9%    
 //------------------------MAIN!!!!!------------------------------->
 
 
@@ -92,12 +137,14 @@ header
   flex-wrap: wrap
   flex-direction: column
   max-width: max($width_base)
-  margin-bottom: 14%
+  padding-bottom: 2.5%
+  
 
 .main_top_block
   +flex
   flex-wrap: wrap
-  height: 35%
+  min-height: 35%
+  margin-bottom: 3%
 
 
 
@@ -115,16 +162,15 @@ header
   padding-bottom: 5%
 
   & strong   
-    +p_font
+    font-size: .87rem
     margin-top: 12%
     display: block
-    line-height: 287%
+    line-height: 297%
     padding-left: 12%
     padding-right: 17%
   & p
-    +p_font
-    font-size: 15.5px
-    line-height: 296%
+    font-size: .86rem
+    line-height: 287%
     padding-top: 6%
     margin-bottom: 12%
     color: grey
@@ -142,163 +188,187 @@ header
       line-height: 10%
       font-weight: bold 
       color: black
-      padding: 4% 0% 0% 0%
+      padding: 5% 0% 0% 0%
       letter-spacing: 0.3px
+      @media screen and  (max-width: 850px) 
+           line-height: 98%
     & p i 
          color: black
-         font-size: 17px
+         font-size: .9rem
          display: inline-block
          position: absolute
-         bottom: 13%
+         bottom: 13.5%
+         @media screen and  (max-width: 1190px)
+           position: static
+         @media screen and  (max-width: 1100px) 
+           font-size: .7rem
+           margin-left: 1rem
+
  
     
 
 
 .short_lines
   background-color: #FCF5D5
-  font-size: 14px
   display: flex
   flex-direction: column
   flex-wrap: wrap
   font-family: $font
-  width: 19%
-  padding: 6% 6%
+  max-width: 31%
+  padding: 5.8%
   margin-top: 10.5%
   & h2
-    +h2_font
-    margin: 7% 0% 0% -2%
+    font-size: 1.18rem
+    margin: 6% 0% 0% -3%
     letter-spacing: 0.5px
   & p 
-    margin: 9% 0% 1% -3%
-    line-height: 251%
+    margin: 8% 0% 1% -2%
+    line-height: 229%
     letter-spacing: 0.07px
     color: grey
-    font-size: 99%
+    font-size: .83rem
     font-weight: 100
   & hr:first-child
-    width: 106%
+    width: 103%
     border: none
     background-color: black
     height: 5px
-    margin-left: -2.4%
+    
   & hr:last-child
     width: 105.8%
     border: none
     background-color: lightgray
     height: 1px
     margin-left: -2.4% 
-    margin-top: 11% 
+    margin-top: -3% 
 
 // ---------------II parts for main
 .main_bottom
   display: flex
-  flex-direction: row
-  height: 987px
-  flex-wrap: wrap
-  position: relative
-
-.quality
-  background-color: #e9f6fd
-  font-size: 14px
-  display: flex
   flex-direction: column
-  flex-wrap: wrap
-  font-family: Basis Grotesque Pro, Tahoma
-  max-width: 13.3%
-  padding: 9% 9% 0px 9%
-  margin-bottom: 25.4%
-  margin-left: 13.3%
-  position: relative
-  & h2 
-    font-family: Basis Grotesque Pro, Tahoma
-    text-transform: uppercase
-    margin: 9% 0% 2% -28%
-  & p 
-    margin: 10% -9% 0% -26%
-    line-height: 253%
-    letter-spacing: 0.1px
-    color: grey
-    font-size: 99%
-    font-weight: 100
-  & hr:first-child
-    margin-top: 1%
-    width: 153%
-    border: none
-    background-color: black
-    height: 5px
-    margin-left: -26.4%
-  & hr:last-child
-    width: 64.1%
-    border: none
-    background-color: lightgray
-    height: 1px
-    margin-left: -11.4%
-    margin-top: -38%
-    top: 108%
-    position: absolute   
+  .first_part
+   +flex
+   min-width: 100%
+   .quality
+     background-color: #e9f6fd
+     font-family: $font
+     max-width: 31.3%
+     margin-left: 13%
+     padding: 0% 5.8%
+     box-sizing: border-box
+     +flex
+     flex-direction: column
+     align-items: center
+     justify-content: space-between
+     flex-wrap: wrap
+     box-sizing: border-box
+     hr:first-child
+      margin-top: 31%
+      min-width: 100%
+      border: none
+      background-color: black
+      height: 5px
+      margin-bottom: 3px
+     hr:last-child
+      min-width: 100%
+      border: none
+      background-color: lightgrey
+      height: 3px
+      margin-top: 0%
+      margin-bottom: 37%
+     h4 
+      font-family: $font
+      text-transform: uppercase
+      margin-bottom: 3.7%
+      margin-top: 9%
+      margin-right: 66%
+      font-size: 1.1rem
+     p 
+      line-height: 35px
+      margin-bottom: 10%
+      font-size: .76rem
+      color: grey
+      font-family: $font
+   .picture
+     margin-top: 4%
+     max-height: 548px
+     @media screen and  (max-width: 1199px) and  (min-width: 760px)
+           max-height: 450px
+     @media screen and  (max-width: 759px)
+           max-height: 300px
 
-.picture
-  display: flex
-  flex-direction: column
-  width: 42.1%
-  margin-top: 7.7%
-  margin-bottom: 33%
+     &:after 
+       content: ""
+       display: flex
+       min-width: 501px
+       @media screen and  (max-width: 1199px) and  (min-width: 760px)
+           min-width: 420px 
+       @media screen and  (max-width: 759px)
+           min-width: 280px 
+     
   
-.team
-  display: flex
-  flex-direction: column
-  position: absolute
-  top: 56.8%
-  left: 49.3%
-  max-width: 19.1%
-  padding: 6% 6%
-  height: 23.3%
-  background-color: #FFE5E4
-  padding-bottom: 16%
-  & hr:first-child
-    width: 65%
-    background-color: black
-    height: 5px
-    margin-left: -2%
-    display: block
-    position: absolute
-    top: 14%
-  & h2 
-    font-family: Basis Grotesque Pro, Tahoma
-    text-transform: uppercase
-    margin: 13% 0% -2% -3%
-    font-size: 123%
-  & p 
-    margin: 9.5% -11% 0% -3%
-    line-height: 229%
-    letter-spacing: 0.1px
-    color: grey
-    font-size: 0.68rem
-    font-weight: 100
-    font-family: Basis Grotesque Pro, Tahoma
-  & a 
-    border: 2px solid #e1cfce
-    text-decoration: none
-    width: 63.5%
-    display: block
-    position: absolute
-    top: 70%
-    height: 12%
-    left: 18%
-    & p 
-      line-height: 10%
-      font-weight: bold 
-      color: black
-      padding: 2% 0% 0% 10%
-      letter-spacing: 0.3px
-      font-size: 96%
-    & p i 
-         color: black
-         font-size: 17px
-         display: inline-block
-         position: absolute
-         bottom: 36.2%
-         left: 85.9%
+  .second_part
+   +flex
+   justify-content: flex-end
+   margin-bottom: 9%
+   .team
+     +flex
+     flex-direction: column
+     align-items: center
+     justify-content: space-around
+     flex-wrap: wrap
+     max-width: 31%
+     min-height: 512px
+     background-color: #ffe5e4
+     margin-top: -14%
+     margin-right: 19.7%
+     box-sizing: border-box
+     padding: 0% 5.3%
+     padding-bottom: 6%
+     h4
+      font-family: $font
+      text-transform: uppercase
+      margin-right: 79%
+      font-size: 1.1rem
+     hr:first-child
+      margin-top: 28%
+      min-width: 101%
+      border: none
+      background-color: black
+      height: 5px
+      margin-bottom: -6%
+     & p 
+      line-height: 35px
+      font-size: .75rem
+      color: grey
+      margin-top: -8%
+      font-family: $font
+     a 
+      border: 2px solid #e1cfce
+      text-decoration: none
+      min-width: 97.5%
+      min-height: 14%
+      +flex
+      justify-content: center 
+      @media screen and  (max-width: 710px) 
+             min-width: 78.5%
+             min-height: 3%         
+      & p 
+       font-weight: 700 
+       color: black
+       font-size: .9rem
+       margin-top: 5%
+       margin-left: -1%
+
+      i 
+        color: black
+        font-size: .9rem
+        margin-left: 88px
+        @media screen and  (max-width: 1100px) 
+           font-size: .7rem
+           margin-left: 1rem
+        
+        
 
 
 
@@ -306,100 +376,105 @@ header
 //-------------------------------FOOTER--------------------------->
 
 .footer_general
-  display: grid
-  grid-template-columns: 19% 18% 18% 7% repeat(1, 1fr)
-  grid-template-rows: repeat(4, 25%)
-  background-color: white
-  width: max($width_base)
-  & div:first-child
-      padding-top: 18%
-      padding-left: 70%
+  +flex
+  max-width: $width_base
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  box-sizing: border-box
+  min-width: 20vw
+  .top 
+   +flex
+   justify-content: flex-start
+   margin-top: 4.5%
+   flex-wrap: wrap
+   box-sizing: border-box
+   min-width: 100%
+   .logo 
+    margin-left: 13.3%
+    +flex
+    img 
+      margin-top: 9%
+    + div
+       margin-left: 4%
+       min-width: 4%
+       margin-top: 1%
+       +flex
+       p
+        line-height: 1px
+        font-size: .87rem
+        margin-top: 4%
+  .middle
+    +flex
+    justify-content: space-around
+    flex-wrap: wrap
+    box-sizing: border-box
+    .city  
+     min-width: $width_base/2
+     +flex
+     justify-content: flex-end
+     padding-top: 3%
+     @media screen and  (max-width: 650px)
+             min-width: auto
+     @media screen and  (max-width: 1300px) and  (min-width: 651px)
+             min-width: $width_base/3       
+     strong 
+      font-size: .89rem
+    .social
+     +flex
+     min-width: $width_base/2
+     padding-top: 3%
+     @media screen and  (max-width: 650px)
+             min-width: auto
+     @media screen and  (max-width: 1300px) and  (min-width: 651px)
+             min-width: $width_base/3        
+    .Amsterdam
+     margin-right: 13%
+     p 
+      line-height: 1.79rem
+      font-size:  .86rem
+    .Rotterdam
+     margin-right: -1%
+     p 
+      line-height: 1.79rem
+      font-size: .86rem
+    .logo_twit
+      +flex
+      justify-content: center
+      max-height: 21px 
+      margin-top: .5%
+      margin-right: -5%
+      margin-left: 14%
+    .logo_linki
+      +flex
+      justify-content: center
+      max-height: 21px
+      margin-left: 14%
+      margin-top: .5%
+  .bottom
+    +flex
+    flex-direction: column
+    align-items: center
+    padding-top: 4.8% 
+    min-width: 100%
+    hr 
+     min-width: 73%
+    .copyright
+     margin-left: 58%
+     margin-top: 1.1%
+     p 
+      font-size: .62rem
 
-  
 
-footer > div
-  font-size: 38px
-  color: $spec_font_color
 
-.box_1
-  grid-row: 1/4
-  grid-auto-columns: max(15%)
-  
-.box_2 .box_6
-  width: 15px
-  
-  
-.box_3 .box_4 .box_5 
-  grid-column: max(1fr)
 
-.box_2 
-  +simpl_font
-  padding-top: 23%
-  padding-left: 3%
-  & strong
-    letter-spacing: 0.3px
-  & span hr
-    width: 1%
-    border: none
-    background-color: black
-    height: 2px
-    display: inline-block
-    position: absolute
 
-.box_6
-  grid-row: 2/4
-  +simpl_font
-  padding: 0% 12% 1% 3%
-  & p 
-    line-height: 223%
-    padding-top: 0%
-    margin-top: 3%  
-    color: gray 
-  & span
-    color: black  
-.box_7
-  grid-row: 2/4 
-  +simpl_font
-  padding: 0% 10% 1% 8%
-  & p 
-    line-height: 223%
-    padding-top: 0%
-    margin-top: 3%
-    color: gray 
-  & span
-    color: black
 
-.box_8
-   grid-row: 2/4
-   padding: 0% 1% 1% 28%
-   margin-top: -15% 
 
-.box_9
-   grid-row: 2/4  
-   padding: 0% 1% 1% 3.5%
-   margin-top: -2.6% 
 
-.box_10
-   grid-column: 1/6 
-   +simpl_font
-   & p
-    padding-left: 72.4%
-    font-size: 12px
-    margin-top: -0.1% 
-   & hr 
-    width: 943px
-    border: none
-    background-color: lightgrey
-    height: 1px
-    margin-bottom: 16px
-    margin-top: 3%
-    margin-left: 11.5% 
+     
 
-.footer_left
-
-.footer_middle
-
-.footer_right
 
 
 //-------------------------------FORM--------------------------->
