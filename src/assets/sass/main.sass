@@ -1,14 +1,10 @@
 @import varibel
 @import smart-grid
+@import forForm
 
 div
   box-sizing: border-box
-canvas
-   position: absolute
-   width: 5%
-   height: 14%  
-   top: 16px 
-   right: 20px
+
 
 html 
   @media screen and  (min-width: 1200px) 
@@ -26,8 +22,6 @@ body
   +flex
   flex-direction: column
   align-items: center
-  max-width: auto
-  max-height: 2930px 
   position: relative
   z-index: 1
 
@@ -116,18 +110,18 @@ header
    .right
      i 
       position: absolute
-      top:  17.1%
-      right: 18%
+      top:  101vh
+      right: 17.7vw
       color: #fff
-      @media screen and  (max-width: 1199px) and (min-width: 851px)
-           top: 17.1% 
-           right: 7%
-      @media screen and  (max-width: 850px) and (min-width: 760px)
-           top: 15.1% 
-           right: 7%
+      @media screen and  (max-width: 1200px) and (min-width: 970px)
+           top: 17% 
+           right: 10%
+      @media screen and  (max-width: 969px) and (min-width: 760px)
+           top: 18.1% 
+           right: 12%
       @media screen and  (max-width: 760px) 
-           top: 12% 
-           right: 9%    
+           top: 16% 
+           right: 14%    
 //------------------------MAIN!!!!!------------------------------->
 
 
@@ -435,9 +429,9 @@ header
      min-width: $width_base/2
      padding-top: 3%
      @media screen and  (max-width: 650px)
-             min-width: auto
+             min-width: $width_base/4.5 
      @media screen and  (max-width: 1300px) and  (min-width: 651px)
-             min-width: $width_base/3        
+             min-width: $width_base/3.5        
     .Amsterdam
      margin-right: 13%
      p 
@@ -493,61 +487,64 @@ header
 
 
 //-------------------------------FORM--------------------------->
-.form
+canvas
+   position: absolute
+   width: 4%
+   height: 6%  
+   top: 16px 
+   right: 20px
+
+.form_second
   position: fixed
   z-index: 10
   background: rgba(229, 141, 114, 0.9)
-  top: 40%
-  right: 30%
-  min-width: 35%
-  min-height: 40%
-  justify-content: center
-
-  
-form.pop_form
-  display: flex
+  min-width: 22vw
+  min-height: 18vw
+  justify-content: space-between
+  +flex
   flex-direction: column
   flex-wrap: wrap
-  justify-content: space-around
   align-items: center
   flex-basis: 47%
-  & input
+  border-radius: 32px
+  box-shadow: 10px 0 30px rgba(249, 252, 80, .6)
+  input
     flex-basis: 12%
-    min-width: 100%
+    min-width: 14vw
     padding-left: 2%
-  & h3 
+    border-radius: 12px
+    box-shadow: 0px 1px 19px yellow
+    line-height: 2vw
+    outline-style: none
+    max-width: 4vw
+  h3 
     display: flex
     flex-basis: 15%
-    font-size: 1.9em
+    font-size: 1.4rem
     max-height: 2% 
-    margin-top: 4%
+    margin-top: 6%
     color: $form_color
-  & button
+  button
     color: $form_color
-    font-size: 1.2em
-    max-width: 66%
+    font-size: 1rem
+    max-width: 10vw
     text-transform: uppercase 
-    padding: 4% 6%
-    border-radius: 4em
+    padding: 2.5%
+    border-radius: 3rem
     outline: none
-    border: 0px
-
-   
-
+    margin-bottom: 4%
+    @media screen and  (max-width: 990px)
+           font-size: .5rem
   
-.show
-  display: flex
-.hidden
-  display: none
-.activ_form
-  
-.wrap
+.wrap_two
   position: fixed
   z-index: 5
   background: rgba(249, 231, 159, 0.2)
   min-width: 100%
   min-height: 100%
-  
+  +flex
+  justify-content: center
+  align-items: center
 
 
 

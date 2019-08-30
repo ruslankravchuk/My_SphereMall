@@ -134,18 +134,33 @@
              	</div>             	
           </section>
 	  </footer>
-	  
-				<div class="wrap hidden">
-				  <div class="hidden form ">
-					<form id="callback" class="pop_form ">
+	           <template class="one_form">
+                   <div class="wrap_one">
+				   	<form id="callback" class="form">
+						<canvas id="My_canvas_one"></canvas>
+						<h3>What can we do for you?</h3>
+						<input type="text" name="name" placeholder="Name" required="" >
+						<input type="text" name="phone" placeholder="Email">
+						<p><textarea name="comment" cols="63" rows="15" placeholder="Message">
+                     </textarea>
+                   </p>
+						<button class="button" type="submit">Send<i class="fas fa-arrow-right"></i></button>
+					  </form>
+				   </div>
+			   </template>	        
+				<template class="second_form">
+					<div class="wrap_two">
+				  	  <form id="callback" class="form_second">
 						<canvas id="My_canvas"></canvas>
 						<h3>Зворотній зв'язок</h3>
 						<input type="text" name="name" placeholder="Ваше ім'я" required="" >
 						<input type="text" name="phone" placeholder="Ваш телефон">
 						<button class="button" type="submit">Відправити</button>
-					</form>
-				  </div>
-			   </div>
+					  </form>
+				   </div>
+				   
+
+			   </template>
  </body>
 </html>
 				<!-- <div>5</div> -->

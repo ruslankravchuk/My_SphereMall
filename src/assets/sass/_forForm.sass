@@ -1,0 +1,136 @@
+//-------------------------------FORM_ONE--------------------------->
+
+.form
+  position: fixed
+  z-index: 10
+  background: white
+  min-width: 28vw
+  min-height: 33vw
+  justify-content: space-between
+  +flex
+  flex-direction: column
+  flex-wrap: wrap
+  align-items: center
+  flex-basis: 47%  
+  box-sizing: border-box
+  p 
+    display: flex
+    justify-content: center
+    
+  input:nth-child(3)
+    margin-top: 17%
+    margin-bottom: 3%
+  input
+    min-width: 23.2vw
+    padding-left: 2%
+    line-height: 3vw
+    outline-style: none
+    max-width: 4vw
+    margin-left: 2%
+  h3 
+    display: flex
+    font-size: .91rem
+    max-height: 2% 
+    margin-top: 11%
+    color: black
+    margin-bottom: -12%
+  button
+    background-color: white
+    font-weight: bold 
+    color: black
+    font-size: .87rem
+    padding: 2.5%
+    outline: none
+    margin-bottom: 11%
+    min-width: 14.8vw
+    min-height: 3.3vw
+    margin-left: 2%
+    i 
+     margin-left: 36%
+     margin-right: -37%
+    @media screen and  (max-width: 990px)
+           font-size: .5rem
+  
+.wrap_one
+  position: fixed
+  z-index: 5
+  background: rgba(113, 113, 113, 0.2)
+  min-width: 100%
+  min-height: 100%
+  +flex
+  justify-content: center
+  align-items: center
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------FORM_II--------------------------->
+canvas
+   position: absolute
+   width: 5%
+   height: 4%  
+   top: 16px 
+   right: 20px
+
+.form_second
+  position: fixed
+  z-index: 10
+  background: rgba(229, 141, 114, 0.9)
+  min-width: 22vw
+  min-height: 18vw
+  justify-content: space-between
+  +flex
+  flex-direction: column
+  flex-wrap: wrap
+  align-items: center
+  flex-basis: 47%
+  border-radius: 32px
+  box-shadow: 10px 0 30px rgba(249, 252, 80, .6)
+  input
+    flex-basis: 12%
+    min-width: 14vw
+    padding-left: 2%
+    border-radius: 12px
+    box-shadow: 0px 1px 19px yellow
+    line-height: 2vw
+    outline-style: none
+    max-width: 4vw
+  h3 
+    display: flex
+    flex-basis: 15%
+    font-size: 1.4rem
+    max-height: 2% 
+    margin-top: 6%
+    color: $form_color
+  button
+    color: $form_color
+    font-size: 1rem
+    max-width: 10vw
+    text-transform: uppercase 
+    padding: 2.5%
+    border-radius: 3rem
+    outline: none
+    margin-bottom: 4%
+    @media screen and  (max-width: 990px)
+           font-size: .5rem
+  
+.wrap_two
+  position: fixed
+  z-index: 5
+  background: rgba(249, 231, 159, 0.2)
+  min-width: 100%
+  min-height: 100%
+  +flex
+  justify-content: center
+  align-items: center
